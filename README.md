@@ -10,7 +10,31 @@ uv sync --frozen
 
 ## Running Examples
 
-Something!
+Launch the server if you are willing to run the code:
+
+```bash
+python -m sglang.launch_server \
+    --host 127.0.0.1 \
+    --port 30000 \
+    --model-path your_fav_model # Qwen/Qwen2.5-7B-Instruct
+```
+
+All the showcase examples are demonstrated in `demo.ipynb`:
+
+* Inference optimizations benchmarks
+    * Continuous batching
+    * Radix cache & LPM Scheduling
+    * Speculative Decoding
+
+* Structured generation
+    ```bash
+    uv run python examples/struct_gen.py
+    ```
+
+* Generation control flow
+    ```bash
+    uv run python examples/control_flow.py
+    ```
 
 ## Sources
 
